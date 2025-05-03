@@ -15,14 +15,14 @@ items:
     runPolicy: Serial
     source:
       git:
-        ref: develop
+        ref: upgrade-to-py-3.13
         uri: https://github.com/ComputerScienceHouse/csh-selections
       type: Git
     strategy:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: python:3.8-ubi8
+          name: python:3.13-bookworm
           namespace: openshift
       type: Source
     successfulBuildsHistoryLimit: 3
